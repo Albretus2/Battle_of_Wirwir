@@ -1381,6 +1381,10 @@ html {
   margin-bottom: 1rem;
 }
 
+.mb-5 {
+  margin-bottom: 1.25rem;
+}
+
 .mt-10 {
   margin-top: 2.5rem;
 }
@@ -1399,10 +1403,6 @@ html {
 
 .mt-8 {
   margin-top: 2rem;
-}
-
-.mb-5 {
-  margin-bottom: 1.25rem;
 }
 
 .block {
@@ -1463,38 +1463,6 @@ html {
 
 .list-disc {
   list-style-type: disc;
-}
-
-.list-image-\[url\(checkmark\.png\)\] {
-  list-style-image: url(checkmark.png);
-}
-
-.list-image-\[url\(\.png\)\] {
-  list-style-image: url(.png);
-}
-
-.list-image-\[url\(img\/\.png\)\] {
-  list-style-image: url(img/.png);
-}
-
-.list-image-\[url\(img\/losePlayer\.png\)\] {
-  list-style-image: url(img/losePlayer.png);
-}
-
-.list-image-\[url\(img\/losePlayer\.\)\] {
-  list-style-image: url(img/losePlayer.);
-}
-
-.list-image-\[url\(img\/losePlayer\.gif\)\] {
-  list-style-image: url(img/losePlayer.gif);
-}
-
-.list-image-\[url\(\.\/img\/losePlayer\.gif\)\] {
-  list-style-image: url(./img/losePlayer.gif);
-}
-
-.list-image-\[url\(\.\/img\/brocoli\.jpeg\)\] {
-  list-style-image: url(./img/brocoli.jpeg);
 }
 
 .grid-flow-col {
@@ -1660,6 +1628,11 @@ html {
   line-height: 1;
 }
 
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
 .text-sm {
   font-size: 0.875rem;
   line-height: 1.25rem;
@@ -1667,11 +1640,6 @@ html {
 
 .text-xl {
   font-size: 1.25rem;
-  line-height: 1.75rem;
-}
-
-.text-lg {
-  font-size: 1.125rem;
   line-height: 1.75rem;
 }
 
@@ -1687,10 +1655,6 @@ html {
   letter-spacing: 0.1em;
 }
 
-.tracking-wide {
-  letter-spacing: 0.025em;
-}
-
 .text-neutral {
   --tw-text-opacity: 1;
   color: var(--fallback-n,oklch(var(--n)/var(--tw-text-opacity)));
@@ -1701,43 +1665,20 @@ html {
   color: var(--fallback-pc,oklch(var(--pc)/var(--tw-text-opacity)));
 }
 
-.text-success {
-  --tw-text-opacity: 1;
-  color: var(--fallback-su,oklch(var(--su)/var(--tw-text-opacity)));
-}
-
-.text-warning {
-  --tw-text-opacity: 1;
-  color: var(--fallback-wa,oklch(var(--wa)/var(--tw-text-opacity)));
-}
-
-.text-accent {
-  --tw-text-opacity: 1;
-  color: var(--fallback-a,oklch(var(--a)/var(--tw-text-opacity)));
-}
-
 .underline {
   text-decoration-line: underline;
+}
+
+.opacity-40 {
+  opacity: 0.4;
 }
 
 .opacity-60 {
   opacity: 0.6;
 }
 
-.opacity-35 {
-  opacity: 0.35;
-}
-
-.opacity-50 {
-  opacity: 0.5;
-}
-
 .opacity-75 {
   opacity: 0.75;
-}
-
-.opacity-40 {
-  opacity: 0.4;
 }
 
 .shadow-lg {
