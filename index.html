@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="mytheme" class="bg-primary">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Battle of Wirwir | Stanley - 62</title>
+    <link rel="stylesheet" href="./src/output.css">
+
+    <!-- box icon -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <main class="pb-20">
+        <!-- title section -->
+        <section id="title" class="container  lg:w-1/2 py-4 px-4  text-center">
+            <h1 class="text-neutral text-5xl textShadow">Battle of wirwir</h1>
+            <p class="text-sm tracking-wider  md:w-2/3 mx-auto mt-2 text-neutral opacity-60">Lorem ipsum dolor, sit amet
+                consectetur
+                adipisicing
+                elit.
+                Delectus
+                accusantium debitis
+                error.</p>
+        </section>
+        <!-- end  -->
+
+        <!-- main section -->
+        <section class="container lg:w-1/2 px-4 mt-10 font-upheval relative">
+            <!-- rules -->
+            <button class="flex flex-wrap items-center gap-2 bg-accent mb-3 py-1 px-4 border-2 border-neutral"
+                onclick="rulesModal.showModal()">
+                <i class='bx bx-info-square text-xl'></i>
+                <p href="" class="underline tracking-widest">How to play</p>
+            </button>
+            <!-- computer section -->
+            <div class="box-comp w-full border-2 border-neutral pt-2 pb-12 px-4 mb-2">
+                <!-- status computer -->
+                <div class="flex flex-wrap w-full justify-between mb-4">
+                    <h3 class="tracking-widest">Computer</h3>
+                    <div class="tracking-widest flex items-center gap-1">
+                        <h3 class="tracking-widest text-xl"><span id="hpCom">5</span>x</h3>
+                        <i class='bx bx-heart-square text-3xl'></i>
+                    </div>
+                </div>
+                <!-- card Computer  -->
+                <div class="cardComp w-44 p-3 border-2 border-neutral mx-auto shadowCard bg-secondary">
+                    <img id="imgComp" src="./img/rand.png"
+                        class="rounded-full w-32 h-32 object-cover object-top mx-auto ">
+                    <h4 id="nameCom" class="tracking-wider text-center text-md mt-3 mb-3">????</h4>
+                    <div
+                        class="flex flex-wrap justify-center border-t-2 border-neutral border-dashed w-3/4 mx-auto py-2">
+                        <p class="text-sm tracking-widest">atk : <span class="atkCom">??</span></p>
+                    </div>
+                </div>
+            </div>
+            <!-- end -->
+
+            <!-- info -->
+            <div class="containerHasil w-full p-4 border-2 border-neutral mx-auto">
+                <h1 id="hasil" class="text-center text-xl tracking-widest"></h1>
+            </div>
+            <!-- end -->
+
+            <!-- player section -->
+            <div class="box-player w-full border-2 border-neutral pt-10 pb-3 px-5  mt-2">
+                <!-- card player -->
+                <div class="cardContainer flex flex-wrap justify-center gap-4">
+                    <div id="mrIroni" class="cardPlayer shadowCard">
+                        <img src="./img/ironi.png"
+                            class="rounded-full w-24 h-24 md:w-32 md:h-32 object-cover object-top mx-auto ">
+                        <h4 class="tracking-wider text-center text-md mt-3 mb-3">MR. ironi</h4>
+                        <div
+                            class="flex flex-wrap justify-between border-t-2 border-neutral border-dashed w-3/4 mx-auto py-2">
+                            <p class="text-sm tracking-widest">atk : <span class="atk">39</span></p>
+                            <p class="text-sm">hp : <span class="hpCard" data-hp="2">2</span></p>
+                        </div>
+                    </div>
+                    <div id="bagasBaterflai" class="cardPlayer shadowCard">
+                        <img src="./img/masFuad.jpeg"
+                            class="rounded-full w-24 h-24 md:w-32 md:h-32 object-cover object-top mx-auto ">
+                        <h4 class="tracking-wider text-center text-md mt-3 mb-3">mas fuad</h4>
+                        <div
+                            class="flex flex-wrap justify-between border-t-2 border-neutral border-dashed w-3/4 mx-auto py-2">
+                            <p class="text-sm tracking-widest">atk : <span class="atk">20</span></p>
+                            <p class="text-sm">hp : <span class="hpCard" data-hp="2">2</span></p>
+                        </div>
+                    </div>
+                    <div id="sigitRendang" class="cardPlayer shadowCard">
+                        <img src="./img/reyhanKecap.jpeg"
+                            class="rounded-full w-24 h-24 md:w-32 md:h-32 object-cover object-top mx-auto ">
+                        <h4 class="tracking-wider text-center text-md mt-3 mb-3">reyhan kecap</h4>
+                        <div
+                            class="flex flex-wrap justify-between border-t-2 border-neutral border-dashed w-3/4 mx-auto py-2">
+                            <p class="text-sm tracking-wider">atk : <span class="atk">50</span></p>
+                            <p class="text-sm">hp : <span class="hpCard" data-hp="1">1</span></p>
+                        </div>
+                    </div>
+                </div>
+                <!-- status -->
+                <div class="flex flex-wrap w-full justify-between mt-10">
+                    <div class="tracking-widest flex items-center gap-1">
+                        <i class='bx bx-heart-square text-3xl'></i>
+                        <h3 class="tracking-widest text-xl"><span id="hpPlay">5</span>x</h3>
+                    </div>
+                    <h3 class="tracking-widest">Player</h3>
+                </div>
+            </div>
+            <!-- end -->
+        </section>
+        <!-- end -->
+    </main>
+
+    <!-- modal info winner -->
+    <div id="win" class="infoModal hidden transition-all">
+        <div class="modalBody ">
+            <img src="./img/winPlayer.gif" class="w-1/2 h-56 mx-auto object-cover">
+            <h1 class="text-3xl text-center tracking-widest mt-5">👑 we have the winner 👑</h1>
+            <p class="text-md text-center tracking-widest">bro sedang memasak</p>
+            <button id="btnCloseWin" class="block p-3 border-2 border-neutral mx-auto mt-5">close</button>
+        </div>
+    </div>
+    <!-- end -->
+    <!-- modal info loser -->
+    <div id="lose" class="infoModal hidden transition-all">
+        <div class="modalBody ">
+            <img src="./img/losePlayer.gif" class="w-1/2 h-56 mx-auto object-cover">
+            <h1 class="text-3xl text-center tracking-widest mt-5">🤡 you're a loser 🤡</h1>
+            <p class="text-md text-center tracking-widest">Sepertinya anda kurang beruntung</p>
+            <p class="text-sm text-center tracking-widest opacity-40">awokawokawok kalah sama bot</p>
+            <button id="btnCloseLose" class="block p-3 border-2 border-neutral mx-auto mt-5">close</button>
+        </div>
+    </div>
+    <!-- end -->
+
+    <!-- modal rules -->
+    <dialog id="rulesModal" class="modal">
+        <div class="modal-box tracking-widest bg-secondary">
+            <i class='bx bx-right-arrow-alt text-neutral text-3xl'></i>
+            <h3 class="font-bold text-lg mb-5">how to play !!</h3>
+            <ul class="list-disc list-outside text-sm opacity-75">
+                <li>pilih salah satu kartu untuk memulai permainan dan komputer juga akan memilih kartu</li>
+                <li>pemenang di tentukan berdasarkan jumalah atk yang terbesar</li>
+                <li>jika kalah, hp pada kartu akan berkurang 1</li>
+                <li>jika hp pada kartu bernilai 0, maka kartu tidak bisa di pakai</li>
+                <li>game akan berakhir ketika hp player/computer bernilai 0</li>
+                <li>good luck .</li>
+            </ul>
+            <div class="modal-action">
+                <form method="dialog">
+                    <!-- if there is a button in form, it will close the modal -->
+                    <button class="btn border-2">Close</button>
+                </form>
+            </div>
+        </div>
+    </dialog>
+    <!-- end -->
+
+
+    <!-- footer -->
+    <footer
+        class="footer footer-center p-10 border-t-2 mt-8 border-primary-content text-primary-content  bottom-0 shadow-lg">
+        <aside>
+            <div class="avatar">
+                <div class="w-24 rounded-full">
+                    <img src="./img/profile.jpg" />
+                </div>
+            </div>
+            <p class="font-bold tracking-wider">
+                ~ Created by Stanley Beraksi / <span class="opacity-60">Albretus</span> ~
+            </p>
+            <p class="tracking-wider">Copyright © 2024 - All right reserved</p>
+        </aside>
+        <nav>
+            <div class="grid grid-flow-col gap-4">
+                <a href="https://www.instagram.com/alberrr.e/" target="_blank">
+                    <i class='bx bxl-instagram-alt text-neutral text-3xl bx-spin-hover'></i>
+                </a>
+                <a href="https://twitter.com/BochiI1874293" target="_blank">
+                    <i class='bx bxl-twitter text-neutral text-3xl bx-spin-hover'></i>
+                </a>
+                <a href="https://github.com/Albretus2" target="_blank">
+                    <i class='bx bxl-github  text-neutral text-3xl bx-spin-hover'></i>
+                </a>
+                <a href="https://www.youtube.com/channel/UCAc4EVbQ8DlYm3aTntDNBZw" target="_blank">
+                    <i class='bx bxl-youtube text-neutral text-3xl bx-spin-hover'></i>
+                </a>
+
+            </div>
+        </nav>
+    </footer>
+    <script src="./src/script.js"></script>
+</body>
+
+</html>

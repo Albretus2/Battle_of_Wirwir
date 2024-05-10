@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: "upheval";
+    src: url(../font/upheavtt.ttf) format("woff2");
+  }
+}
+
+* {
+  @apply font-upheval;
+}
+
+.textShadow {
+  text-shadow: 4px 4px 5px #888888;
+}
+
+.cardPlayer {
+  @apply w-32 md:w-44 p-3 border-2 border-neutral  bg-secondary transition-all cursor-pointer;
+}
+
+.shadowCard {
+  box-shadow: 6px 6px #1d1b17;
+}
+
+.animasiClick {
+  @apply translate-x-2 translate-y-2;
+}
+
+.infoModal {
+  background-color: rgba(0, 0, 0, 0.3) !important;
+  @apply w-full h-full left-0 right-0 top-0 bottom-0 fixed z-10;
+}
+
+.modalBody {
+  @apply md:h-1/2 md:w-1/2 w-80 h-2/3 py-10 bg-primary/50 fixed left-0 right-0 top-0 bottom-0 z-30 m-auto border-2 border-neutral backdrop-blur-lg;
+}
